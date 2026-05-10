@@ -1,0 +1,23 @@
+{
+  "skill_name": "macos-publisher",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "I have a compiled macOS app at /Users/dev/projects/TodoApp/build/TodoApp.app and I need to notarize it and create a professional installer DMG so I can distribute it. My Developer ID is stored in keychain with the profile name 'apple-notary'. Save the final ZIP to /Users/dev/releases/. My app is called TodoApp.",
+      "expected_output": "Final ZIP file at /Users/dev/releases/TodoApp-notarized.zip containing the notarized DMG with the correct structure (app + Applications symlink). Validation confirms notarization is attached.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "I'm trying to distribute my app 'ScreenCapture' but I haven't notarized it yet. The compiled app is in /opt/build/ScreenCapture.app. I need to check if it's properly code-signed first, then notarize it, create a DMG, and package everything as a ZIP. I'll use my Developer ID profile 'apple-notary'. Output should go to /opt/dist/.",
+      "expected_output": "Verification that app is signed, final ZIP at /opt/dist/ScreenCapture-notarized.zip with notarized DMG inside. Process should catch if app is unsigned and provide next steps.",
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "My app 'DataProcessor' at ~/work/DataProcessor.app needs to be distributed. I haven't set up my Apple notarization credentials yet - I have my Apple ID dev@company.com, an app-specific password, and my Team ID is ABC123DEF4. Walk me through the full process of setting up notarization credentials, notarizing the app, creating the DMG, and getting it ready for distribution in ~/releases/.",
+      "expected_output": "Step-by-step guidance: (1) create keychain profile with credentials, (2) validate app signing, (3) create DMG with proper structure, (4) submit and wait for notarization, (5) staple, (6) package ZIP. Final output: ~/releases/DataProcessor-notarized.zip with validation.",
+      "files": []
+    }
+  ]
+}
